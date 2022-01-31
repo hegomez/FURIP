@@ -1,0 +1,9 @@
+30012022
+-Se deja de usar la funcion para crear los elementos de los formularios, para hacerlos de manera manual y aplicar mas adelante las validaciones con la libreria jQuery-Validation-Engine
+-Se terminaron las secciones:
+    Lugar de Ocurrencia
+    Datos del Vehiculo
+    Datos del Propieario del Vehiculo
+    Datos del Conductor del Vehiculo
+    Datos de la Remision
+-Se creo la Base de datos y se incio la carga de datos fijos

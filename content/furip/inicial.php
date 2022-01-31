@@ -11,10 +11,16 @@
         </div>
     </div>
     <div class="col-md-7">
-        <?php input_group('text','RadAnt','fas fa-hashtag','# Radicado Anterior') ?>
+        <div class="input-group">
+            <div class="input-group-addon"><i class="fas fa-hashtag"></i></div>
+            <input type="text" class="form-control" name="RadAnt" id="RadAnt" placeholder="# Radicado Anterior" value="">
+        </div>
     </div>
-    
+
     <div class="col-md-7">
-        <?php input_group('text','NroFact','fas fa-file-invoice','# Factura') ?>
+        <div class="input-group">
+            <div class="input-group-addon"><i class="fas fa-file-invoice"></i></div>
+            <input type="text" class="form-control" name="NroFact" id="NroFact" placeholder="# Factura" value="">
+        </div>
     </div>
 </div>

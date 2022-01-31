@@ -10,9 +10,9 @@
             echo'<div class="input-group"> <div class="input-group-addon"><i class="'.$icon.'"></i></div>
             <select class="form-control" name="'.$id.'" id="'.$id.'" '.$tool.'>';
             echo'<option disabled selected value="-1">...</option>';
-            foreach($value as $v)
+            foreach($value as $k => $v)
             {
-                echo'<option value="'.$v.'">'.$v.'</option>';
+                echo'<option value="'.$k.'">'.$v.'</option>';
             }
             echo'</select>';
             echo'</div>';
