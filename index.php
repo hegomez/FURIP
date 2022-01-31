@@ -1,3 +1,6 @@
+<?php
+	require_once('inc/func.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -92,17 +95,16 @@
 							</div>
 							<div class="col-md-8">
 								<div class="tab-content">
-									<div class="tab-pane active" id="tab-INICIAL">INICIAL</div>
-									<div class="tab-pane" id="tab-INSTITUCION">INSTITUCION</div>
-									<div class="tab-pane" id="tab-VICTIMA">VICTIMA</div>
-									<div class="tab-pane" id="tab-LUGAR">LUGAR</div>
-									<div class="tab-pane" id="tab-VEHICULO">VEHICULO</div>
-									<div class="tab-pane" id="tab-PROPIETARIO">PROPIETARIO</div>
-									<div class="tab-pane" id="tab-CONDUCTOR">CONDUCTOR</div>
-									<div class="tab-pane" id="tab-REMISION">REMISION</div>
-									<div class="tab-pane" id="tab-TRANSPORTE">TRANSPORTE</div>
-									<div class="tab-pane" id="tab-ATENCION">ATENCION</div>
-									<div class="tab-pane" id="tab-VALORES">VALORES</div>
+									<?php
+										$i=0;
+										foreach( $Titulo as $key => $data ){
+											$active=($i==0)?'active':'';
+											echo'<div class="tab-pane '.$active.'" id="tab-'.$data[0].'">';
+											include('content/furip/'.strtolower($data[0]).'.php');
+											echo '</div>';
+											$i++;
+										}
+									?>
 								</div>
 							</div>
 							<div class="clearfix"></div>
@@ -131,8 +133,20 @@
 <script src="dist/js/demo.js"></script>
 <script>
 	$(document).ready(function () {
-		$('.sidebar-menu').tree()
+		$('.sidebar-menu').tree();
 	})
+	
+	$(document).on('click','.checkbox',function(){
+		let miscasillas=document.getElementById('RG');
+		$("#RG").prop('checked', $("#RG").prop("checked"));
+		console.log($("#RG").prop('checked'));
+		if($(this).hasClass('checked')){
+			$(this).removeClass('checked');
+		}else{
+			$(this).addClass('checked');
+		}
+	});
+	
 </script>
 </body>
 </html>
