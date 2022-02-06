@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row row-bottom-margin">
     <div class="col-md-12">
         <div class="form-group">
             <label class="ctrl-icheckbox">
@@ -10,14 +10,17 @@
             </label>
         </div>
     </div>
-    <div class="col-md-7">
+</div>
+<div class="row row-bottom-margin">
+    <div class="col-md-6">
         <div class="input-group">
             <div class="input-group-addon"><i class="fas fa-hashtag"></i></div>
             <input type="text" class="form-control" name="RadAnt" id="RadAnt" placeholder="# Radicado Anterior" value="">
         </div>
     </div>
-
-    <div class="col-md-7">
+</div>
+<div class="row row-bottom-margin">
+    <div class="col-md-6">
         <div class="input-group">
             <div class="input-group-addon"><i class="fas fa-file-invoice"></i></div>
             <input type="text" class="form-control" name="NroFact" id="NroFact" placeholder="# Factura" value="">
